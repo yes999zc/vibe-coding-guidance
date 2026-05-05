@@ -1,0 +1,224 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0a0f"/>
+      <stop offset="100%" stop-color="#12121a"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="l1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+    <linearGradient id="l2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="l3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="l4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#db2777"/>
+    </linearGradient>
+    <filter id="glow-filter">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="8" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <marker id="arrow-down" markerWidth="10" markerHeight="8" refX="5" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8" fill="#6366f1" fill-opacity="0.6"/>
+    </marker>
+    <marker id="arrow-right" markerWidth="10" markerHeight="8" refX="10" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8" fill="#6366f1" fill-opacity="0.6"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect width="1200" height="900" fill="url(#glow)"/>
+
+  <!-- Title -->
+  <text x="600" y="48" text-anchor="middle" font-size="24" font-weight="700" fill="#e2e8f0" letter-spacing="1">Vibe Coding Level Guide</text>
+  <text x="600" y="72" text-anchor="middle" font-size="13" fill="#94a3b8" letter-spacing="0.5">A decision framework for choosing the right AI-assisted development approach</text>
+
+  <!-- Question Band -->
+  <rect x="40" y="96" width="1120" height="44" rx="22" fill="#1e1b4b" stroke="#312e81" stroke-width="1"/>
+  <text x="60" y="124" font-size="13" font-weight="600" fill="#a5b4fc">ROUTING</text>
+  <text x="140" y="124" font-size="13" fill="#c7d2fe">Project Type</text>
+  <text x="290" y="124" font-size="12" fill="#6366f1">→</text>
+  <text x="310" y="124" font-size="13" fill="#c7d2fe">Experience Level</text>
+  <text x="480" y="124" font-size="12" fill="#6366f1">→</text>
+  <text x="500" y="124" font-size="13" fill="#c7d2fe">Verification Rigor</text>
+  <text x="670" y="124" font-size="12" fill="#6366f1">→</text>
+  <text x="690" y="124" font-size="13" font-weight="600" fill="#a5b4fc">RECOMMENDED LEVEL</text>
+
+  <!-- Cards Row -->
+  <!-- L1 -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="165" width="260" height="310" rx="16" fill="#0f172a" stroke="#22c55e" stroke-opacity="0.3" stroke-width="1.5"/>
+    <rect x="40" y="165" width="260" height="310" rx="16" fill="url(#l1)" fill-opacity="0.04"/>
+    <rect x="40" y="165" width="6" height="310" rx="3" fill="url(#l1)"/>
+    <text x="180" y="200" text-anchor="middle" font-size="32" font-weight="800" fill="url(#l1)">L1</text>
+    <text x="180" y="222" text-anchor="middle" font-size="10" font-weight="600" fill="#22c55e" letter-spacing="3">PURE VIBE</text>
+    <line x1="70" y1="238" x2="290" y2="238" stroke="#22c55e" stroke-opacity="0.15" stroke-width="1"/>
+    <text x="60" y="262" font-size="11" font-weight="600" fill="#94a3b8">UPSTREAM INVESTMENT</text>
+    <text x="60" y="282" font-size="20" font-weight="700" fill="#e2e8f0">Minimal</text>
+    <text x="60" y="302" font-size="11" fill="#64748b">One-sentence prompt</text>
+    <text x="60" y="326" font-size="11" font-weight="600" fill="#94a3b8">QUALITY ASSURANCE</text>
+    <text x="60" y="346" font-size="12" fill="#64748b">Visual check only</text>
+    <text x="60" y="370" font-size="11" font-weight="600" fill="#94a3b8">BEST FOR</text>
+    <text x="60" y="390" font-size="12" fill="#64748b">One-off demos</text>
+    <text x="60" y="406" font-size="12" fill="#64748b">Single-file prototypes</text>
+    <text x="60" y="430" font-size="11" font-weight="600" fill="#94a3b8">KARPATHY RULES</text>
+    <text x="60" y="450" font-size="12" fill="#64748b">Skipped — speed first</text>
+  </g>
+
+  <!-- Arrow L1→L2 -->
+  <line x1="300" y1="320" x2="330" y2="320" stroke="#6366f1" stroke-opacity="0.4" stroke-width="1.5" marker-end="url(#arrow-right)"/>
+
+  <!-- L2 -->
+  <g filter="url(#shadow)">
+    <rect x="340" y="165" width="260" height="310" rx="16" fill="#0f172a" stroke="#3b82f6" stroke-opacity="0.3" stroke-width="1.5"/>
+    <rect x="340" y="165" width="260" height="310" rx="16" fill="url(#l2)" fill-opacity="0.04"/>
+    <rect x="340" y="165" width="6" height="310" rx="3" fill="url(#l2)"/>
+    <text x="480" y="200" text-anchor="middle" font-size="32" font-weight="800" fill="url(#l2)">L2</text>
+    <text x="480" y="222" text-anchor="middle" font-size="10" font-weight="600" fill="#3b82f6" letter-spacing="3">GUIDED VIBE</text>
+    <line x1="370" y1="238" x2="590" y2="238" stroke="#3b82f6" stroke-opacity="0.15" stroke-width="1"/>
+    <text x="360" y="262" font-size="11" font-weight="600" fill="#94a3b8">UPSTREAM INVESTMENT</text>
+    <text x="360" y="282" font-size="20" font-weight="700" fill="#e2e8f0">Low</text>
+    <text x="360" y="302" font-size="11" fill="#64748b">Iterative prompts + feedback loops</text>
+    <text x="360" y="326" font-size="11" font-weight="600" fill="#94a3b8">QUALITY ASSURANCE</text>
+    <text x="360" y="346" font-size="12" fill="#64748b">Run + visual inspect</text>
+    <text x="360" y="370" font-size="11" font-weight="600" fill="#94a3b8">BEST FOR</text>
+    <text x="360" y="390" font-size="12" fill="#64748b">Personal tools</text>
+    <text x="360" y="406" font-size="12" fill="#64748b">Single-page apps</text>
+    <text x="360" y="430" font-size="11" font-weight="600" fill="#94a3b8">KARPATHY RULES</text>
+    <text x="360" y="450" font-size="12" fill="#64748b">Light — surface assumptions</text>
+  </g>
+
+  <!-- Arrow L2→L3 -->
+  <line x1="600" y1="320" x2="630" y2="320" stroke="#6366f1" stroke-opacity="0.4" stroke-width="1.5" marker-end="url(#arrow-right)"/>
+
+  <!-- L3 -->
+  <g filter="url(#shadow)">
+    <rect x="640" y="165" width="260" height="310" rx="16" fill="#0f172a" stroke="#8b5cf6" stroke-opacity="0.3" stroke-width="1.5"/>
+    <rect x="640" y="165" width="260" height="310" rx="16" fill="url(#l3)" fill-opacity="0.04"/>
+    <rect x="640" y="165" width="6" height="310" rx="3" fill="url(#l3)"/>
+    <text x="780" y="200" text-anchor="middle" font-size="32" font-weight="800" fill="url(#l3)">L3</text>
+    <text x="780" y="222" text-anchor="middle" font-size="10" font-weight="600" fill="#8b5cf6" letter-spacing="3">HYBRID ENGINEERING</text>
+    <line x1="670" y1="238" x2="890" y2="238" stroke="#8b5cf6" stroke-opacity="0.15" stroke-width="1"/>
+    <text x="660" y="262" font-size="11" font-weight="600" fill="#94a3b8">UPSTREAM INVESTMENT</text>
+    <text x="660" y="282" font-size="20" font-weight="700" fill="#e2e8f0">Medium</text>
+    <text x="660" y="302" font-size="11" fill="#64748b">Architecture spec + tasks + review</text>
+    <text x="660" y="326" font-size="11" font-weight="600" fill="#94a3b8">QUALITY ASSURANCE</text>
+    <text x="660" y="346" font-size="12" fill="#64748b">Manual QA + diff review</text>
+    <text x="660" y="370" font-size="11" font-weight="600" fill="#94a3b8">BEST FOR</text>
+    <text x="660" y="390" font-size="12" fill="#64748b">Multi-module apps</text>
+    <text x="660" y="406" font-size="12" fill="#64748b">Team internal tools</text>
+    <text x="660" y="430" font-size="11" font-weight="600" fill="#94a3b8">KARPATHY RULES</text>
+    <text x="660" y="450" font-size="12" fill="#64748b">Full — all 4 principles</text>
+  </g>
+
+  <!-- Arrow L3→L4 -->
+  <line x1="900" y1="320" x2="930" y2="320" stroke="#6366f1" stroke-opacity="0.4" stroke-width="1.5" marker-end="url(#arrow-right)"/>
+
+  <!-- L4 -->
+  <g filter="url(#shadow)">
+    <rect x="940" y="165" width="220" height="310" rx="16" fill="#0f172a" stroke="#ec4899" stroke-opacity="0.3" stroke-width="1.5"/>
+    <rect x="940" y="165" width="220" height="310" rx="16" fill="url(#l4)" fill-opacity="0.04"/>
+    <rect x="940" y="165" width="6" height="310" rx="3" fill="url(#l4)"/>
+    <text x="1050" y="200" text-anchor="middle" font-size="32" font-weight="800" fill="url(#l4)">L4</text>
+    <text x="1050" y="222" text-anchor="middle" font-size="10" font-weight="600" fill="#ec4899" letter-spacing="3">ORCHESTRATED</text>
+    <line x1="970" y1="238" x2="1130" y2="238" stroke="#ec4899" stroke-opacity="0.15" stroke-width="1"/>
+    <text x="960" y="262" font-size="11" font-weight="600" fill="#94a3b8">UPSTREAM INVESTMENT</text>
+    <text x="960" y="282" font-size="20" font-weight="700" fill="#e2e8f0">High</text>
+    <text x="960" y="302" font-size="11" fill="#64748b">Multi-agent + CI/CD + TDD</text>
+    <text x="960" y="326" font-size="11" font-weight="600" fill="#94a3b8">QUALITY ASSURANCE</text>
+    <text x="960" y="346" font-size="12" fill="#64748b">Automated tests + code review</text>
+    <text x="960" y="370" font-size="11" font-weight="600" fill="#94a3b8">BEST FOR</text>
+    <text x="960" y="390" font-size="12" fill="#64748b">Production SaaS</text>
+    <text x="960" y="406" font-size="12" fill="#64748b">Multi-team projects</text>
+    <text x="960" y="430" font-size="11" font-weight="600" fill="#94a3b8">KARPATHY RULES</text>
+    <text x="960" y="450" font-size="12" fill="#64748b">Strict — Goal-Driven core</text>
+  </g>
+
+  <!-- Decision Tree Section -->
+  <text x="40" y="520" font-size="13" font-weight="600" fill="#a5b4fc">ROUTING LOGIC</text>
+
+  <!-- Q1: Project Type -->
+  <g>
+    <rect x="40" y="536" width="360" height="160" rx="12" fill="#1e1b4b" stroke="#312e81" stroke-width="1"/>
+    <text x="60" y="562" font-size="13" font-weight="700" fill="#c7d2fe">Q1: What are you building?</text>
+    <text x="60" y="586" font-size="12" fill="#94a3b8">▸ One-off demo / Prototype</text>
+    <text x="60" y="606" font-size="12" fill="#94a3b8">▸ Internal tool / Personal product</text>
+    <text x="60" y="626" font-size="12" fill="#94a3b8">▸ Production SaaS / User data</text>
+    <text x="60" y="646" font-size="12" fill="#ef4444">▸ Infrastructure / Security-critical</text>
+    <text x="310" y="646" font-size="11" fill="#ef4444">→ Don't vibe</text>
+  </g>
+
+  <!-- Arrow Q1→Q2 -->
+  <line x1="400" y1="616" x2="432" y2="616" stroke="#6366f1" stroke-opacity="0.5" stroke-width="2" marker-end="url(#arrow-right)"/>
+
+  <!-- Q2: Experience -->
+  <g>
+    <rect x="440" y="536" width="360" height="160" rx="12" fill="#1e1b4b" stroke="#312e81" stroke-width="1"/>
+    <text x="460" y="562" font-size="13" font-weight="700" fill="#c7d2fe">Q2: Your technical background?</text>
+    <text x="460" y="586" font-size="12" fill="#64748b">▸ Non-developer / Beginner</text>
+    <text x="460" y="606" font-size="12" fill="#64748b">▸ Can read and tweak code</text>
+    <text x="460" y="626" font-size="12" fill="#64748b">▸ Senior engineer</text>
+  </g>
+
+  <!-- Arrow Q2→Q3 -->
+  <line x1="800" y1="616" x2="832" y2="616" stroke="#6366f1" stroke-opacity="0.5" stroke-width="2" marker-end="url(#arrow-right)"/>
+
+  <!-- Q3: Verification -->
+  <g>
+    <rect x="840" y="536" width="320" height="160" rx="12" fill="#1e1b4b" stroke="#312e81" stroke-width="1"/>
+    <text x="860" y="562" font-size="13" font-weight="700" fill="#c7d2fe">Q3: Verification rigor?</text>
+    <text x="860" y="586" font-size="12" fill="#94a3b8">▸ "Does it run?" is enough</text>
+    <text x="860" y="606" font-size="12" fill="#94a3b8">▸ Manual test checklist</text>
+    <text x="860" y="626" font-size="12" fill="#94a3b8">▸ Automated tests + CI</text>
+  </g>
+
+  <!-- Karpathy Principles Banner -->
+  <rect x="40" y="720" width="1120" height="60" rx="12" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="60" y="746" font-size="13" font-weight="600" fill="#a5b4fc">KARPATHY BEHAVIORAL PRINCIPLES</text>
+  <text x="60" y="768" font-size="12" fill="#64748b">Think Before Coding</text>
+  <circle cx="55" cy="763" r="3" fill="#6366f1"/>
+  <text x="220" y="768" font-size="12" fill="#64748b">Simplicity First</text>
+  <circle cx="215" cy="763" r="3" fill="#6366f1"/>
+  <text x="380" y="768" font-size="12" fill="#64748b">Surgical Changes</text>
+  <circle cx="375" cy="763" r="3" fill="#6366f1"/>
+  <text x="550" y="768" font-size="12" fill="#64748b">Goal-Driven Execution</text>
+  <circle cx="545" cy="763" r="3" fill="#6366f1"/>
+
+  <!-- Application intensity -->
+  <text x="740" y="746" font-size="11" fill="#94a3b8">Application:</text>
+  <rect x="830" y="736" width="60" height="12" rx="6" fill="#22c55e" fill-opacity="0.2"/>
+  <text x="835" y="745" font-size="9" fill="#22c55e">L1: Skip</text>
+  <rect x="900" y="736" width="60" height="12" rx="6" fill="#3b82f6" fill-opacity="0.2"/>
+  <text x="905" y="745" font-size="9" fill="#3b82f6">L2: Light</text>
+  <rect x="970" y="736" width="70" height="12" rx="6" fill="#8b5cf6" fill-opacity="0.2"/>
+  <text x="975" y="745" font-size="9" fill="#8b5cf6">L3: Full</text>
+  <rect x="1050" y="736" width="70" height="12" rx="6" fill="#ec4899" fill-opacity="0.2"/>
+  <text x="1055" y="745" font-size="9" fill="#ec4899">L4: Strict</text>
+
+  <!-- Trap counter -->
+  <text x="740" y="768" font-size="11" fill="#94a3b8">Traps: 5 cross-level pitfalls in SKILL.md</text>
+
+  <!-- Footer -->
+  <text x="600" y="840" text-anchor="middle" font-size="10" fill="#475569">github.com/yes999zc/vibe-coding-guidance  •  MIT License  •  v1.0</text>
+
+  <!-- Decorative dots -->
+  <circle cx="1150" cy="50" r="2" fill="#6366f1" fill-opacity="0.4"/>
+  <circle cx="1165" cy="40" r="1.5" fill="#6366f1" fill-opacity="0.3"/>
+  <circle cx="1140" cy="35" r="1" fill="#6366f1" fill-opacity="0.2"/>
+  <circle cx="50" cy="830" r="2" fill="#6366f1" fill-opacity="0.3"/>
+  <circle cx="35" cy="845" r="1.5" fill="#6366f1" fill-opacity="0.2"/>
+</svg>

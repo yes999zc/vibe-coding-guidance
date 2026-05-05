@@ -1,52 +1,139 @@
-# Vibe Coding Level Guide
+<p align="center">
+  <img src="assets/architecture.svg" width="100%" alt="Vibe Coding Level Guide Architecture" />
+</p>
 
-引导用户根据项目类型、技术背景和目标质量，选择正确的 Vibe Coding 等级 (L1-L4)。
+<p align="center">
+  <a href="https://github.com/yes999zc/vibe-coding-guidance/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License" />
+  </a>
+  <a href="https://github.com/yes999zc/vibe-coding-guidance">
+    <img src="https://img.shields.io/github/stars/yes999zc/vibe-coding-guidance?style=flat&logo=github" alt="GitHub Stars" />
+  </a>
+  <a href="https://github.com/yes999zc/vibe-coding-guidance/blob/main/SKILL.md">
+    <img src="https://img.shields.io/badge/hermes-skill-8B5CF6?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiPjxwYXRoIGQ9Ik0xMiAyTDkgOUwxMiAxNUwxNSA5TDEyIDJ6TTUgMTdMMTIgMjJMMTkgMTciLz48L3N2Zz4=" alt="Hermes Skill" />
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome" />
+  </a>
+</p>
 
-## 这是什么
+<h3 align="center">
+  Find your Vibe Coding level — from pure vibes to production-grade orchestration
+</h3>
 
-Vibe Coding 是 Andrej Karpathy 在 2025 年 2 月提出的概念：
+<br/>
+
+---
+
+## Overview
+
+**Vibe Coding** is a term coined by [Andrej Karpathy](https://x.com/karpathy/status/1886192184808149383) in February 2025:
 
 > *"There's a new kind of coding I call 'vibe coding', where you fully give in to the vibes, embrace exponentials, and forget that the code even exists."*
 
-但实际体验（见 Karpathy 的 [MenuGen 博文](https://karpathy.bearblog.dev/vibe-coding-menugen/)）告诉我们：**不是所有项目都适合无脑 vibe**。这个 guide 通过三个问题帮你找到对的 level。
+But his [MenuGen experience](https://karpathy.bearblog.dev/vibe-coding-menugen/) revealed a hard truth: **not every project should be pure-vibed**. The line between "fun Saturday hack" and "production nightmare" is sharp — and this guide helps you navigate it.
 
-## 核心内容
+This framework classifies vibe coding into **4 maturity levels (L1–L4)** based on project type, technical background, and verification rigor. It also integrates **Karpathy's 4 behavioral principles** to avoid common AI coding pitfalls.
 
-- **4 个成熟度等级** — L1 纯 Vibe → L4 系统化编排
-- **路由逻辑** — 根据项目类型、技术背景、验证意愿推荐对应 level
-- **每个 level 的具体做法** — 怎么干、Karpathy 准则应用程度、注意事项
-- **Karpathy 通用陷阱清单** — AI 编码的常见毛病，不分 level
-- **结合 Karpathy 4 条行为准则** — Think Before Coding / Simplicity First / Surgical Changes / Goal-Driven Execution
+---
 
-## 出处
+## The 4 Levels
 
-- [Karpathy 原推（2025.02）](https://x.com/karpathy/status/1886192184808149383)
-- [Karpathy MenuGen 博文（2025.04）](https://karpathy.bearblog.dev/vibe-coding-menugen/)
-- [Karpathy-Inspired Claude Code Guidelines](https://github.com/forrestchang/andrej-karpathy-skills) — 4 条行为准则的完整实践
-- [awesome-vibe-coding](https://github.com/bluegalaxy111/awesome-vibe-coding) — Vibe Coding 工具大全
+| Level | Name | Upfront Investment | QA Method | Best For |
+|:------|:-----|:------------------|:----------|:---------|
+| **L1** | Pure Vibe | Minimal — one-sentence prompt | Visual check | One-off demos, prototypes |
+| **L2** | Guided Vibe | Low — iterative prompts | Run + inspect | Personal tools, SPAs |
+| **L3** | Hybrid Engineering | Medium — architecture spec + review | Manual QA + diff review | Multi-module apps, team tools |
+| **L4** | Orchestrated | High — multi-agent + CI/CD + TDD | Automated tests + code review | Production SaaS, multi-team |
 
-## 使用方法
+### Routing Logic
 
-### 作为 Hermes Skill（推荐）
+The level is determined by answering 3 questions:
+
+```
+Q1: What are you building?
+    ├── One-off demo / Prototype → continue to Q2
+    ├── Internal tool / Personal product → L2-L3 (depends on Q2)
+    ├── Production SaaS / User data → L3-L4
+    └── Infrastructure / Security-critical → Don't vibe code this
+                            │
+Q2: Your technical background?
+    ├── Non-developer / Beginner → L1-L2 (warn about deployment pitfalls)
+    ├── Can read and tweak code → L2-L3
+    └── Senior engineer → L3-L4 (you can steer)
+                            │
+Q3: Verification rigor?
+    ├── "Does it run?" is enough → L1-L2
+    ├── Manual test checklist → L2-L3
+    └── Automated tests + CI → L3-L4
+```
+
+---
+
+## Karpathy's 4 Behavioral Principles
+
+Each level applies these principles differently:
+
+| Principle | L1 | L2 | L3 | L4 |
+|:----------|:---|:---|:---|:---|
+| **Think Before Coding** — Surface assumptions, don't hide confusion | Skip | Light | Full | Strict |
+| **Simplicity First** — Minimum code, no speculative abstractions | Light | Mild | Full | Strict |
+| **Surgical Changes** — Touch only what you must | N/A | Mild | Full | Strict |
+| **Goal-Driven Execution** — Define success criteria, loop until verified | "It works" | Step-by-step | Test-driven | CI-verified |
+
+Read the full guide: [`SKILL.md`](./SKILL.md) (Chinese, for Hermes AI agent) | [`SKILL_EN.md`](./SKILL_EN.md) (English)
+
+---
+
+## Cross-Level Pitfalls (from Karpathy's MenuGen)
+
+These apply regardless of your level:
+
+- **🔀 Scope creep** — AI "improves" adjacent code. Always review the diff.
+- **🤫 Silent confusion** — AI fakes knowing deprecated APIs. Verify critical paths.
+- **🏗️ Over-engineering** — Factory pattern for a one-liner. Call it out immediately.
+- **⏩ Skipping verification** — AI moves on without waiting for results. Make it validate first.
+- **🔐 Security holes** — Hardcoded keys, logging passwords, email-based user matching. Human-review security logic.
+
+---
+
+## Usage
+
+### As a Hermes AI Skill (recommended)
+
+The skill is designed to be loaded by AI agents. When loaded, the agent asks you 3 questions and routes you to the right level:
 
 ```bash
 skill_view(name='vibe-coding-guidance')
 ```
 
-加载后 AI 会自动问你三个问题，然后路由到对应 level。
+### As a standalone document
 
-### 作为独立文档
+Read [`SKILL.md`](./SKILL.md) (Chinese) or [`SKILL_EN.md`](./SKILL_EN.md) (English) and determine your level manually.
 
-直接阅读 `SKILL.md`，按判定树自己判断。
+### Integrating into your project
 
-## 本地开发
+Copy the Karpathy guidelines into your `CLAUDE.md` or Cursor rules:
 
 ```bash
-git clone https://github.com/yes999zc/vibe-coding-guidance.git
-cd vibe-coding-guidance
-# 编辑 SKILL.md
+curl -o CLAUDE.md https://raw.githubusercontent.com/yes999zc/vibe-coding-guidance/main/CLAUDE.md
 ```
+
+---
+
+## Related Resources
+
+- [Karpathy's original tweet (Feb 2025)](https://x.com/karpathy/status/1886192184808149383) — The term that started it all
+- [Karpathy's MenuGen post (Apr 2025)](https://karpathy.bearblog.dev/vibe-coding-menugen/) — the full vibe coding experience report
+- [Karpathy-Inspired Claude Code Guidelines](https://github.com/forrestchang/andrej-karpathy-skills) — The 4 behavioral principles as a CLAUDE.md
+- [awesome-vibe-coding](https://github.com/bluegalaxy111/awesome-vibe-coding) — Curated list of vibe coding tools and resources
+
+---
+
+## Contributing
+
+PRs welcome! If you have ideas for improving the level definitions, adding new dimensions, or translating to more languages, open an issue or submit a PR.
 
 ## License
 
-MIT
+MIT — feel free to use, modify, and share.
